@@ -70,6 +70,15 @@ body {
     background-color: #042037;
 }
 
+.p-4 {
+    padding-top: 20px;
+}
+
+.p-4 img {
+    display: block;
+    margin: 0 auto;1
+}
+
 .btn-danger {
     border-radius: 0 !important;
     border-bottom: 5px solid #aa3d37;
@@ -104,11 +113,7 @@ hr {
     text-align: center;
 }
 
-.p-3 {
-    overflow: hidden;
-}
-
-.sam-height {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+.footer-down {
+    padding-top: 10px;
+    background-color: #123652;
 }
