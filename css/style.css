@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #294F6D;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    color: white;
+}
+
+.navbar {
+    border-top: 0px !important;
+    box-shadow: none;
+    border-radius: 0 !important;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    background-color: #123652;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 5px solid #042037;
+    margin: 0px;
+}
+
+.nav li a {
+    color: #8FA8BC !important;
+}
+
+.nav li a:hover {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 20px;
+}
+
+.navbar-toggle , .navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: #d9534f !important;
+    border-color: #d9534f !important;
+    color: white;
+}
+
+.navbar-collapse {
+    border-color: #123652 !important;
+}
+
+.p-1 img {
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+.p-1 {
+    background-image: url("../img/bg-1.jpg");
+    background-size: auto;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.p-1 , .p-2 {
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.p-3 {
+    padding-top: 30px;
+    background-color: #042037;
+}
+
+.btn-danger {
+    border-radius: 0 !important;
+    border-bottom: 5px solid #aa3d37;
+    margin-bottom: 10px;
+}
+
+.vote-button .btn-danger {
+    padding-right: 100px;
+    padding-left: 100px;
+    pading-bottom: 5px;
+}
+
+hr {
+    border-color: #0E314B !important;
+}
+
+.well {
+    border: 0px;
+    background-color: #527590;
+    border-bottom: 5px solid #042037;
+    border-radius: 0 !important;
+}
+
+.well-inside {
+    border: 0px;
+    background-color: #436D8D;
+    border-bottom: 5px solid #042037;
+    border-radius: 0 !important;
+}
+
+.title {
+    text-align: center;
+}
+
+.p-3 {
+    overflow: hidden;
+}
+
+.sam-height {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
