@@ -1,16 +1,26 @@
 <!--
 Pallets: http://paletton.com/#uid=13x0u0kllllev-GhVrsoLfesb97
 Animations Lists: https://daneden.github.io/animate.css/
+
+Todo:
+- Add a config.php
+- Add a live counter players
+- Add a theme selector
 -->
+<?php
+error_reporting(0);
+
+include 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blank Page</title>
+    <title><?php echo $webTitle;?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/<?php echo $theme; ?>.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/hover-min.css">
     <script src="js/jquery.min.js"></script>
@@ -40,10 +50,10 @@ Animations Lists: https://daneden.github.io/animate.css/
                 <li><a data-scroll href="#about" class="hvr-forward"><strong><i class="fa fa-book"></i> About</strong></a></li>
                 <li><a data-scroll href="#vote" class="hvr-forward"><strong><i class="fa fa-check"></i> Vote</strong></a></li>
                 <li><a data-scroll href="#staff" class="hvr-forward"><strong><i class="fa fa-user"></i> Staff</strong></a></li>
+                <li><a href="<?php echo $storelink;?>" class="hvr-forward"><strong><i class="fa fa-cart-plus"></i> Store</strong></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <a href="#" class="btn btn-danger btn-lg hvr-backward"><strong><i class="fa fa-cart-plus"></i> Shop</strong></a>
-                <a data-scroll href="#vote" class="btn btn-danger btn-lg hvr-forward"><strong><i class="fa fa-check"></i> Vote</strong></a>
+                <a data-scroll href="#vote" class="btn btn-danger btn-lg hvr-forward"><strong><?php echo strtoupper($serverip);?></strong></a>
             </ul>
         </div>
     </div>
@@ -54,12 +64,15 @@ Animations Lists: https://daneden.github.io/animate.css/
 <div class="container-fluid p-1 text-center" id="counter">
     <!-- Image is 600x600, you also can try other size but it will not work properly! -->
     <img src="img/logo.png" alt="#" class="img-responsive wow fadeInDown">
-    <button class="btn btn-danger btn-lg hvr-bounce-in">Join with -/- Others!</button>
+    <button id="" class="btn btn-danger btn-lg hvr-bounce-in">Join with -/- Others!</button>
 </div>
 <!-- The End of P1 -->
 
 <!-- About -->
 <div class="container p-2" id="about">
+    <div class="well well-inside text-center">
+        <h1>About The Server</h1>
+    </div>
     <div class="well">
         <div class="row wow fadeInDown">
             <div class="col-md-6 title">
@@ -68,7 +81,7 @@ Animations Lists: https://daneden.github.io/animate.css/
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula. Fusce rutrum augue nec erat faucibus, id porta nisl aliquam. Vivamus consectetur ex faucibus sapien lobortis dapibus. Pellentesque id dignissim turpis, eget facilisis turpis. Phasellus a justo mauris. In tempor, mi et porta tincidunt, quam velit luctus nulla, ut tincidunt est enim non ipsum. Morbi pulvinar tellus non nisl maximus aliquam. Nam vitae sem dui. Etiam fringilla arcu eros, non pulvinar leo accumsan non. Pellentesque non iaculis nibh. Ut ut est vulputate sem mollis tincidunt. Praesent diam magna, mattis id ipsum cursus, elementum pharetra odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut convallis sed massa eu mollis. Donec a facilisis tellus. Nullam condimentum gravida nunc, non ornare nulla porttitor non. Etiam suscipit elit ac semper ullamcorper. Curabitur varius libero lacus, quis tristique metus efficitur id. Curabitur sit amet tincidunt turpis, at lacinia erat. Donec a enim sit amet massa lacinia tempus ut a lorem. Phasellus fringilla id ex euismod malesuada. Proin aliquam imperdiet dui et dignissim. Proin accumsan vulputate justo, et facilisis nibh.</p>
             </div>
             <div class="col-md-6 title">
-                <h2 class="btn btn-danger btn-lg">MC.YOURSERVER.COM</h2>
+                <h2 class="btn btn-danger btn-lg"><?php echo strtoupper($serverip);?></h2>
                 <hr>
                 <img src="img/pic-1.jpg" class="img-responsive" alt="#">
             </div>
@@ -121,7 +134,7 @@ Animations Lists: https://daneden.github.io/animate.css/
                     </div>
                     <h4>100 Balance</h4>
                     <br>
-                    <h4>MVP+ Ranks</h4>2
+                    <h4>MVP+ Ranks</h4>
                     <br>
                     <h4>100 LuckyBlocks</h4>
                     <br>
@@ -143,7 +156,7 @@ Animations Lists: https://daneden.github.io/animate.css/
     <div class="row">
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/DoomGary/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/DoomGary/200.png" class="img-responsive img-circle">
                 <h2>DoomGary</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -151,7 +164,7 @@ Animations Lists: https://daneden.github.io/animate.css/
         </div>
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/HeroBrine/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/HeroBrine/200.png" class="img-responsive img-circle">
                 <h2>HeroBrine</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -159,7 +172,7 @@ Animations Lists: https://daneden.github.io/animate.css/
         </div>
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/BruneiDarussalam/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/BruneiDarussalam/200.png" class="img-responsive img-circle">
                 <h2>BruneiDarussalam</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -167,7 +180,7 @@ Animations Lists: https://daneden.github.io/animate.css/
         </div>
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/GamingKidBN/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/GamingKidBN/200.png" class="img-responsive img-circle">
                 <h2>GamingKidBN</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -175,7 +188,7 @@ Animations Lists: https://daneden.github.io/animate.css/
         </div>
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/Hypixel/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/Hypixel/200.png" class="img-responsive img-circle">
                 <h2>Hypixel</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -183,7 +196,7 @@ Animations Lists: https://daneden.github.io/animate.css/
         </div>
         <div class="col-md-4 wow fadeInDown">
             <div class="well">
-                <img src="https://minotar.net/helm/Notch/200.png" class="img-responsive img-circle">
+                <img src="http://minotar.net/helm/Notch/200.png" class="img-responsive img-circle">
                 <h2>Notch</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula.</p>
@@ -205,6 +218,12 @@ Animations Lists: https://daneden.github.io/animate.css/
 
 <script>
 	smoothScroll.init();
+</script>
+
+<script type="text/javascript">
+    var ref = setInterval(function() {
+        $('#onlineplayers').load('onlineplayers.php');
+    }, 1000);
 </script>
 
 </html>

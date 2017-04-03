@@ -3,10 +3,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #294F6D;
+    background-color: #FFF05C;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    color: white;
+    color: black;
 }
 
 .navbar {
@@ -17,15 +17,15 @@ body {
     padding-top: 10px;
     padding-left: 50px;
     padding-bottom: 10px;
-    background-color: #123652;
+    background-color: #FFED34;
     border-right: 0px;
     border-left: 0px;
-    border-bottom: 5px solid #042037;
+    border-bottom: 5px solid #B4A403;
     margin: 0px;
 }
 
 .nav li a {
-    color: #8FA8BC !important;
+    color: white !important;
 }
 
 .nav li a:hover {
@@ -67,7 +67,7 @@ body {
 
 .p-3 {
     padding-top: 30px;
-    background-color: #042037;
+    background-color: #786D00;
 }
 
 .p-4 {
@@ -97,15 +97,15 @@ hr {
 
 .well {
     border: 0px;
-    background-color: #527590;
-    border-bottom: 5px solid #042037;
+    background-color: #FFE800;
+    border-bottom: 5px solid #B4A403;
     border-radius: 0 !important;
 }
 
 .well-inside {
     border: 0px;
-    background-color: #436D8D;
-    border-bottom: 5px solid #042037;
+    background-color: #C4B300;
+    border-bottom: 5px solid #FFE800;
     border-radius: 0 !important;
 }
 
@@ -115,5 +115,5 @@ hr {
 
 .footer-down {
     padding-top: 10px;
-    background-color: #123652;
+    background-color: #FFE800;
 }
