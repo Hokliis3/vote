@@ -66,7 +66,8 @@ include 'config.php';
 <div class="container-fluid p-1 text-center" id="counter">
     <!-- Image is 600x600, you also can try other size but it will not work properly! -->
     <img src="img/logo.png" alt="#" class="img-responsive wow fadeInDown">
-    <button id="onlineplayers" class="btn btn-danger btn-lg hvr-bounce-in">Join with -/- Others!</button>
+    <button id="onlineplayers" class="copypaste btn btn-danger btn-lg hvr-bounce-in" data-clipboard-text="<?php echo strtoupper($serverip).':'.$serverport;?>" >Join with -/- Others!</button>
+
 </div>
 <!-- The End of P1 -->
 
@@ -211,22 +212,25 @@ include 'config.php';
 <!-- Footer -->
 <footer>
     <div class="container-fluid footer-down text-center">
-        <p>Copyrighted by SERVER &copy; 2017.</p>
+        <p>Copyrighted by <?php echo $servername;?> &copy; 2017.</p>
     </div>
 </footer>
 <!-- The End of Footer -->
 
 <!-- Scripts (Meh)-->
 <script type="text/javascript">
+    //Clicky event
     $('.copypaste').tooltip({
         trigger: 'click',
         placement: 'bottom'
     });
 
+    //Setting up the tooltip
     function setTooltip(btn, msg) {
         btn.tooltip('hide').attr('data-original-title', msg).tooltip('show');
     }
 
+    //Hiding back the tooltip
     function hideTooptip(btn) {
         setTimeout(function() {
             btn.tooltip('hide');

@@ -7,6 +7,7 @@ Theme List: darkblue, red, yellow
 $theme = "darkblue";
 $webTitle = "Server Portal | Welcome";
 
+$servername = "PlanetBn";
 $serverip = "mc.planetbn.com";
 $serverport = "25565";
 
