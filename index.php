@@ -27,7 +27,9 @@ include 'config.php';
     <script src="js/bootstrap.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/wow.min.js"></script>
-    <script>
+    <script src="js/clipboard.min.js"></script>
+    <script type="text/javascript">
+        smoothScroll.init();
         new WOW().init();
     </script>
 </head>
@@ -50,10 +52,10 @@ include 'config.php';
                 <li><a data-scroll href="#about" class="hvr-forward"><strong><i class="fa fa-book"></i> About</strong></a></li>
                 <li><a data-scroll href="#vote" class="hvr-forward"><strong><i class="fa fa-check"></i> Vote</strong></a></li>
                 <li><a data-scroll href="#staff" class="hvr-forward"><strong><i class="fa fa-user"></i> Staff</strong></a></li>
-                <li><a href="<?php echo $storelink;?>" class="hvr-forward"><strong><i class="fa fa-cart-plus"></i> Store</strong></li>
+                <li><a href="<?php echo $storelink;?>" class="hvr-forward"><strong><i class="fa fa-cart-plus"></i> Store</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <a data-scroll href="#vote" class="btn btn-danger btn-lg hvr-forward"><strong><?php echo strtoupper($serverip);?></strong></a>
+                <li><button class="copypaste btn btn-danger btn-lg" data-clipboard-text="<?php echo strtoupper($serverip).':'.$serverport;?>" ><strong><?php echo strtoupper($serverip);?></strong></button></li>
             </ul>
         </div>
     </div>
@@ -64,7 +66,7 @@ include 'config.php';
 <div class="container-fluid p-1 text-center" id="counter">
     <!-- Image is 600x600, you also can try other size but it will not work properly! -->
     <img src="img/logo.png" alt="#" class="img-responsive wow fadeInDown">
-    <button id="" class="btn btn-danger btn-lg hvr-bounce-in">Join with -/- Others!</button>
+    <button id="onlineplayers" class="btn btn-danger btn-lg hvr-bounce-in">Join with -/- Others!</button>
 </div>
 <!-- The End of P1 -->
 
@@ -118,13 +120,13 @@ include 'config.php';
                     <div class="well well-inside">
                         <h1>Vote Links</h1>
                     </div>
-                    <a href="#" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <a href="<?php echo $voteone;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
                     <br>
-                    <a href="#" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <a href="<?php echo $votetwo;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
                     <br>
-                    <a href="#" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <a href="<?php echo $votethree;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
                     <br>
-                    <a href="#" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <a href="<?php echo $votefour;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
                 </div>
             </div>
             <div class="col-md-4 sam-height wow bounceInDown">
@@ -214,16 +216,44 @@ include 'config.php';
 </footer>
 <!-- The End of Footer -->
 
-</body>
-
-<script>
-	smoothScroll.init();
-</script>
-
+<!-- Scripts (Meh)-->
 <script type="text/javascript">
+    $('.copypaste').tooltip({
+        trigger: 'click',
+        placement: 'bottom'
+    });
+
+    function setTooltip(btn, msg) {
+        btn.tooltip('hide').attr('data-original-title', msg).tooltip('show');
+    }
+
+    function hideTooptip(btn) {
+        setTimeout(function() {
+            btn.tooltip('hide');
+        }, 1000);
+    }
+
+    //Clipboard.js scripts
+    var btn = document.getElementById('copypaste');
+    var clipboard = new Clipboard(".btn");
+
+    //If success, show the tooltip for a moments
+    clipboard.on('success', function(e) {
+        var btn = $(e.trigger);
+        setTooltip(btn, 'Copied!');
+        hideTooptip(btn);
+    });
+
+    //If failed, do nothing. Welp
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+    //onlineplayers live counter scripts
     var ref = setInterval(function() {
         $('#onlineplayers').load('onlineplayers.php');
     }, 1000);
 </script>
 
+</body>
 </html>

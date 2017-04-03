@@ -1,7 +1,9 @@
 <?php
 include 'config.php';
 
-$playersonline = file_get_contents('http://minecraft-api.com/api/ping/playeronline.php?ip=mc.planetbn.com&port=25565');
+error_reporting(0);
+
+$playersonline = file_get_contents('http://minecraft-api.com/api/ping/playeronline.php?ip='.$serverip.'&port='.$serverport);
 
 if($playersonline == true) {
 	echo "Join with ".$playersonline." Others!";
