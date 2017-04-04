@@ -93,63 +93,43 @@ include 'config.php';
 </div>
 <!-- The End of About -->
 
-<!-- Voting -->
-<div class="container-fluid p-3 text-center" id="vote">
+<!-- Store info -->
+<div class="container-fluid p-5 text-center">
     <div class="container">
         <div class="well well-inside">
-            <h1>Voting Info</h1>
+            <h1>About Donations</h1>
         </div>
-        <div class="row">
-            <div class="col-md-4 sam-height wow bounceInDown">
-                <div class="well">
+        <div class="well">
+            <div class="row">
+                <div class="col-md-6">
                     <div class="well well-inside">
-                        <h1>Vote Rewards</h1>
+                        <div class="well">
+                            <h1>Info</h1>
+                        </div>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere efficitur urna non vehicula. Fusce rutrum augue nec erat faucibus, id porta nisl aliquam. Vivamus consectetur ex faucibus sapien lobortis dapibus. Pellentesque id dignissim turpis, eget facilisis turpis. Phasellus a justo mauris. In tempor, mi et porta tincidunt, quam velit luctus nulla, ut tincidunt est enim non ipsum. Morbi pulvinar tellus non nisl maximus aliquam. Nam vitae sem dui. Etiam fringilla arcu eros, non pulvinar leo accumsan non. Pellentesque non iaculis nibh. Ut ut est vulputate sem mollis tincidunt. Praesent diam magna, mattis id ipsum cursus, elementum pharetra odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut convallis sed massa eu mollis. Donec a facilisis tellus. Nullam condimentum gravida nunc, non ornare nulla porttitor non. Etiam suscipit elit ac semper ullamcorper. Curabitur varius libero lacus, quis tristique metus efficitur id. Curabitur sit amet tincidunt turpis, at lacinia erat. Donec a enim sit amet massa lacinia tempus ut a lorem. Phasellus fringilla id ex euismod malesuada. Proin aliquam imperdiet dui et dignissim. Proin accumsan vulputate justo, et facilisis nibh.</p>
                     </div>
-                    <h4>1 Balance</h4>
-                    <br>
-                    <h4>10 Claim Land</h4>
-                    <br>
-                    <h4>1 LuckyBlocks</h4>
-                    <br>
-                    <h4>1 RareKey</h4>
-                    <br>
-                    <h4>and More!</h4>
                 </div>
-            </div>
-            <div class="col-md-4 sam-height wow bounceInDown">
-                <div class="well vote-button">
+                <div class="col-md-6">
                     <div class="well well-inside">
-                        <h1>Vote Links</h1>
+                        <div class="well">
+                            <h1>Ranks</h1>
+                        </div>
+                        <h4>VIP-1</h4>
+                        <br>
+                        <h4>VIP-2</h4>
+                        <br>
+                        <h4>VIP-3</h4>
+                        <br>
+                        <h4>VIP-4</h4>
+                        <br>
+                        <a href="<?php echo $storelink;?>" class="btn btn-danger btn-lg">Shop Link</a>
                     </div>
-                    <a href="<?php echo $voteone;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
-                    <br>
-                    <a href="<?php echo $votetwo;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
-                    <br>
-                    <a href="<?php echo $votethree;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
-                    <br>
-                    <a href="<?php echo $votefour;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
-                </div>
-            </div>
-            <div class="col-md-4 sam-height wow bounceInDown">
-                <div class="well">
-                    <div class="well well-inside">
-                        <h1>Top Rewards</h1>
-                    </div>
-                    <h4>100 Balance</h4>
-                    <br>
-                    <h4>MVP+ Ranks</h4>
-                    <br>
-                    <h4>100 LuckyBlocks</h4>
-                    <br>
-                    <h4>100 RareKey</h4>
-                    <br>
-                    <h4>and More!</h4>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- The End of Voting -->
+<!-- The End of Donations Info -->
 
 <!-- Staff -->
 <div class="container p-4 text-center" id="staff">
@@ -208,6 +188,64 @@ include 'config.php';
     </div>
 </div>
 <!-- The End of Staff -->
+
+<!-- Voting -->
+<div class="container-fluid p-3 text-center" id="vote">
+    <div class="container">
+        <div class="well well-inside">
+            <h1>Voting Info</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4 sam-height wow bounceInDown">
+                <div class="well">
+                    <div class="well well-inside">
+                        <h1>Vote Rewards</h1>
+                    </div>
+                    <h4>1 Balance</h4>
+                    <br>
+                    <h4>10 Claim Land</h4>
+                    <br>
+                    <h4>1 LuckyBlocks</h4>
+                    <br>
+                    <h4>1 RareKey</h4>
+                    <br>
+                    <h4>and More!</h4>
+                </div>
+            </div>
+            <div class="col-md-4 sam-height wow bounceInDown">
+                <div class="well vote-button">
+                    <div class="well well-inside">
+                        <h1>Vote Links</h1>
+                    </div>
+                    <a href="<?php echo $voteone;?>" class="btn btn-danger btn-lg hvr-grow btn-responsvie" target="_blank">Vote #1</a>
+                    <br>
+                    <a href="<?php echo $votetwo;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <br>
+                    <a href="<?php echo $votethree;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                    <br>
+                    <a href="<?php echo $votefour;?>" class="btn btn-danger btn-lg hvr-grow" target="_blank">Vote #1</a>
+                </div>
+            </div>
+            <div class="col-md-4 sam-height wow bounceInDown">
+                <div class="well">
+                    <div class="well well-inside">
+                        <h1>Top Rewards</h1>
+                    </div>
+                    <h4>100 Balance</h4>
+                    <br>
+                    <h4>MVP+ Ranks</h4>
+                    <br>
+                    <h4>100 LuckyBlocks</h4>
+                    <br>
+                    <h4>100 RareKey</h4>
+                    <br>
+                    <h4>and More!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The End of Voting -->
 
 <!-- Footer -->
 <footer>
