@@ -249,6 +249,36 @@ include 'config.php';
 
 <!-- Footer -->
 <footer>
+    <div>
+        <div class="container-fluid footer-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h2>Support Email</h2>
+                        <hr>
+                        <p><?php echo $email;?></p>
+                        <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2>Social Media</h2>
+                        <hr>
+                        <a href="<?php echo $facebook;?>" target="_blank" class="btn btn-danger">Facebook</a>
+                        <br>
+                        <a href="<?php echo $youtube;?>" target="_blank" class="btn btn-danger">Youtube</a>
+                        <br>
+                        <a href="<?php echo $twitter;?>" target="_blank" class="btn btn-danger">Twtter</a>
+                        <br>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2>Join our community!</h2>
+                        <hr>
+                        <p>Join our server now by using <?php echo strtoupper($serverip).':'.$serverport;?> on your minecraft multiplayers.</p>
+                        <p>Verions 1.8.x-1.11</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid footer-down text-center">
         <p>Copyrighted by <?php echo $servername;?> &copy; 2017.</p>
     </div>

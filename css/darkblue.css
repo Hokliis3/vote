@@ -115,5 +115,10 @@ hr {
 
 .footer-down {
     padding-top: 10px;
+    background-color: #042037;
+}
+
+.footer-up {
     background-color: #123652;
+    padding-bottom: 20px;
 }
